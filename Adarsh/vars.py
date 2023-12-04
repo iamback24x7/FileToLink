@@ -9,20 +9,20 @@ load_dotenv()
 
 class Var(object):
     MULTI_CLIENT = False
-    API_ID = int(getenv('API_ID', '1222723'))
-    API_HASH = str(getenv('API_HASH', '67e6a613a39747035a30ad8eac363678'))
+    API_ID = int(getenv('API_ID', ''))
+    API_HASH = str(getenv('API_HASH', ''))
     BOT_TOKEN = str(getenv('BOT_TOKEN', ''))
     name = str(getenv('name', 'filetolinkvjbot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
-    BIN_CHANNEL = int(getenv('BIN_CHANNEL', '-1002133996735'))
+    BIN_CHANNEL = int(getenv('BIN_CHANNEL', ''))
     PORT = int(getenv('PORT', 8080))
     BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
     PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
-    OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "770118462").split())  
+    OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "").split())  
     NO_PORT = bool(getenv('NO_PORT', False))
     APP_NAME = None
-    OWNER_USERNAME = str(getenv('OWNER_USERNAME', 'no_username_1bot'))
+    OWNER_USERNAME = str(getenv('OWNER_USERNAME', ''))
     if 'DYNO' in environ:
         ON_HEROKU = True
         APP_NAME = str(getenv('APP_NAME'))
